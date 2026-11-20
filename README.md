@@ -41,10 +41,10 @@ The best sampler depends on what is known about the target. A good envelope favo
 report/   AR_vs_MCMC.pdf           Report
           (LaTeX source)
 code/     Experiments.R            Experiments
-data/     challenger_oring.csv          Challenger O-ring data
+data/     challenger_oring.csv     Challenger O-ring data
 ```
 
-The Challenger data are also written into the script, so `data/challenger_oring.csv` is provided for convenience only.
+The Challenger data are also written into the script, so `data/challenger_oring.csv` is provided for reference only.
 
 ## Running the code
 
