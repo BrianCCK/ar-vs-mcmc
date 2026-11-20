@@ -26,9 +26,9 @@ ESS is estimated with Geyer's initial positive sequence estimator (checked again
 
 ## Main findings
 
-- **Low dimension, good envelope: AR wins.** In one dimension AR needs 1.2 to 2.2 evaluations per effective sample, against 4.4 to 6.7 for RWM, and its draws are exact with no tuning or burn-in.
+- **AR is best with low dimension and good envelope.** In one dimension AR needs 1.2 to 2.2 evaluations per effective sample, against 4.4 to 6.7 for RWM, and its draws are exact with no tuning or burn-in.
 - **IMH is not uniformly cheaper than AR.** With the same proposal its cost can reach $2c - 1$; it cost more than AR in 10 of 16 comparisons in Experiment 1.
-- **Dimension favours MCMC.** AR's cost grows exponentially ($c = 1.2^d$ for a proposal 20% wider than the target, about 9,100 at $d = 50$), while RWM's grows roughly linearly ($k \propto d^{0.91}$). RWM becomes cheaper beyond about 23 dimensions.
+- **Dimension favours RWM.** AR's cost grows exponentially ($c = 1.2^d$ for a proposal 20% wider than the target, about 9,100 at $d = 50$), while RWM's grows roughly linearly ($k \propto d^{0.91}$). RWM becomes cheaper beyond about 23 dimensions.
 - **Correlation slows every sampler whose proposal ignores it.** At $d = 5$ and $\rho = 0.99$, AR's constant ($3.4 \times 10^5$) exceeds the whole budget, and Gibbs, the cheapest sampler here, still needs about 400 evaluations per effective sample.
 - **MCMC can fail silently.** RWM on a well-separated mixture, and on the strongly correlated Challenger posterior, returned full-length chains with a normal-looking acceptance rate but biased estimates; only comparing several chains revealed the problem.
 - **Real data confirms the pattern.** With a proposal fitted to the posterior, AR and IMH need fewer than two evaluations per effective sample on the Challenger data.
